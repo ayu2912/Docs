@@ -1,2 +1,25 @@
 # Docs
- An end-to-end RAG pipeline for querying unstructured PDF documents using natural language. Engineered document ingestion, chunking strategies, and vector similarity search to improve retrieval accuracy. Incorporated metadata aware processing to enable source attribution and enhance answer reliability.
+
+Docs is a retrieval-augmented generation (RAG) system that enables natural language querying over PDF documents. It converts unstructured text into a searchable knowledge base using embeddings and vector similarity search.
+
+---
+
+## Features
+
+- PDF ingestion and text extraction  
+- Semantic chunking  
+- Embedding-based retrieval  
+- Context-aware question answering  
+- Metadata support (page, source)
+
+---
+
+## Tech Stack
+
+- Python  
+- LangChain  
+- PyMuPDF / PyPDF  
+- FAISS / Chroma  
+
+
+
