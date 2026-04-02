@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:sbert.net)",
+      "Bash(git -C /d/github/Docs log --oneline -10)",
+      "WebFetch(domain:python.plainenglish.io)",
+      "WebFetch(domain:www.truefoundry.com)",
+      "WebFetch(domain:slowapi.readthedocs.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:dev.turmansolutions.ai)",
+      "WebFetch(domain:www.netlify.com)",
+      "WebFetch(domain:thedkpatel.medium.com)",
+      "WebFetch(domain:bryananthonio.com)",
+      "WebFetch(domain:loadforge.com)",
+      "WebFetch(domain:johal.in)"
+    ]
+  }
+}

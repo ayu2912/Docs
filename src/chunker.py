@@ -1,7 +1,6 @@
-import re
 from config import CHUNK_SIZE, CHUNK_OVERLAP
 
-//tokenizing
+# tokenizing
 try:
     import tiktoken
     enc = tiktoken.get_encoding("cl100k_base")
@@ -11,7 +10,7 @@ except ImportError:
     def _token_len(text: str) -> int:     # type: ignore[misc]
         return max(1, len(text) // 4)
 
-SEPERATORS = ["\n\n", "\n", ". ", "! ", "? ", "; ", ", ", " ", ""]
+SEPARATORS = ["\n\n", "\n", ". ", "! ", "? ", "; ", ", ", " ", ""]
 
 
 def split_recursive(
@@ -45,7 +44,7 @@ def split_recursive(
                 chunks.append(current.strip())
             # Part itself may be too large — recurse with next separator
             if _token_len(part) > chunk_size and tail_seps:
-                chunks.extend(_split_recursive(part, chunk_size, tail_seps))
+                chunks.extend(split_recursive(part, chunk_size, tail_seps))
                 current = ""
             else:
                 current = part
